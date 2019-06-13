@@ -6,12 +6,13 @@ import { User } from "../types/common";
 export type EditUserFormProps = {
     onSubmit: () => void;
     submitTitle?: string;
-    formValues?: User;
+    formValues?: Partial<User>;
 };
 
 export class EditUserForm extends React.Component<EditUserFormProps> {
     static defaultProps: Partial<EditUserFormProps> = {
         submitTitle: "edit",
+        formValues: {},
     };
 
     render() {
