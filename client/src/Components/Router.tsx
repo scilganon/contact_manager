@@ -1,39 +1,19 @@
 import * as React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Stub } from "../Components/Stub";
-import { Intro } from "../Components/Intro";
-import { Unauthorized } from "../Components/Unauthorized";
-
-const routes: Array<{ path: string, component: React.ComponentType, exact?: boolean }> = [
-    {
-        path: "/",
-        component: Intro,
-        exact: true,
-    },
-    {
-        path: "/login",
-        component: Unauthorized,
-    },
-    {
-        path: "/info",
-        component: Stub,
-    },
-    {
-        path: "/users",
-        component: Stub
-    },
-    {
-        path: "/users/:user",
-        component: Stub
-    }
-];
+import { Stub } from "./Stub";
+import { Intro } from "./Intro";
+import { Unauthorized } from "./Unauthorized";
+import { UserList } from "./UserList"
+import {EditUser } from "./EditUser";
 
 export const AppLayout = (
     <Router>
         <div className="app-layout">
-            {routes.map(({ component, path, ...props }) => (
-                <Route key={path} path={path} component={component} exact={props.exact} />
-            ))}
+            <Route path="/" exact component={Intro} />
+            <Route path="/login" component={Unauthorized} />
+            <Route path="/info" component={Stub} />
+            <Route path="/users" exact component={UserList} />
+            <Route path="/users/:id" exact component={EditUser} />
         </div>
     </Router>
 );

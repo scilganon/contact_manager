@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const { BaseHrefWebpackPlugin } = require('base-href-webpack-plugin');
+
+const PORT = 9000;
 
 module.exports = {
     mode: "development",
@@ -14,7 +16,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, '/../build'),
         compress: true,
-        port: 9000,
+        port: PORT,
         historyApiFallback: {
             rewrites: [
                 { from: /.*/, to: '/index.html' },
@@ -47,5 +49,6 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin(),
+        new BaseHrefWebpackPlugin({ baseHref: '/' }),
     ],
 };
