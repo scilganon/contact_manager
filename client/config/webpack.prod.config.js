@@ -1,10 +1,16 @@
 module.exports = {
-    mode: "development",
+    mode: "production",
 
     entry: "./src/index.ts",
     output: {
         filename: "bundle.js",
         path: __dirname + "/build"
+    },
+
+    devServer: {
+        contentBase: path.join(__dirname, 'build'),
+        compress: true,
+        port: 9000
     },
 
     // Enable sourcemaps for debugging webpack's output.
