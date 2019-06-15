@@ -9,7 +9,7 @@ enum TabsList {
 }
 
 export const Unauthorized: React.FunctionComponent = () => (
-    <Tabs defaultActiveKey={TabsList.LOGIN} id="unuathorized-page">
+    <Tabs defaultActiveKey={TabsList.REGISTER} id="unuathorized-page">
         <Tab eventKey={TabsList.LOGIN} title="Login">
             <LoginForm />
         </Tab>

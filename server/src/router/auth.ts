@@ -27,17 +27,22 @@ router.post('/login', async (req, res) => {
        // @ts-ignore
        User.findOne({ email: req.fields.login, password: req.fields.password })
            .then((user) => {
+               if(!user) {
+                   return res.end(401);
+               }
+
                // @ts-ignore
-               req.session = {
-                   auth: true,
-                   role: ROLES.USER,
-                   uid: user.id,
-               };
+               req.session.auth = true;
+               // @ts-ignore
+               req.session.role = ROLES.USER;
+               // @ts-ignore
+               req.session.uid = user.id;
 
                return res.json({
                    role: ROLES.USER
                });
-           }).catch(() => {
+           }).catch((e) => {
+               console.warn(e.message);
                return res.end(401);
            });
 });
