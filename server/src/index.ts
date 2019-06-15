@@ -17,7 +17,7 @@ App.use(bodyParser.json());
 App.use(cookieParser());
 App.use(expressSession({
     secret: process.env["SESSION_SECRET"],
-    resave: true,
+    cookie: { maxAge: 60000 },
 }));
 
 App.use("/", authRoute);

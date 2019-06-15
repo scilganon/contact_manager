@@ -1,6 +1,23 @@
 import { Schema, model } from "mongoose";
 
-const UserSchema = new Schema({
+export type Address = {
+    address: string;
+    city: string;
+    postalCode: string;
+    country: string;
+};
+
+export type UserType = {
+    id: number,
+    name: string,
+    lastName: string,
+    email: string;
+    phoneNumber: string;
+    website: string;
+    address: Address
+};
+
+const UserSchema = new Schema<UserType>({
     id: { type: Number, min: 1,  default: Date.now, required: true },
     name: { type: String, default: '', trim: true, maxlength: 100, required: true },
     lastName: { type: String, default: '', trim: true, maxlength: 100, required: true },

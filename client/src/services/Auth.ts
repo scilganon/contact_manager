@@ -1,4 +1,5 @@
 import { ROLES } from '../../../common/roles'
+import * as axios from "axios";
 
 const KEY = "auth";
 const ROLE = "role";
@@ -15,14 +16,32 @@ export const AuthStore = {
     get isAuthentificated() {
         return !!+sessionStorage.getItem(KEY);
     },
-    login: () => new Promise((resolve) => {
-        // @ts-ignore
-        sessionStorage.setItem(KEY, String(1));
-        setTimeout(resolve, 1000);
+    login: (data: FormData) => new Promise(async (resolve, reject) => {
+        try {
+            // @ts-ignore
+            const { data: { role } } = await axios({
+                method: "post",
+                url: "/login",
+                data,
+            });
+
+            // @ts-ignore
+            sessionStorage.setItem(KEY, String(1));
+            sessionStorage.setItem(ROLE, role);
+
+            window.location.reload();
+        } catch (e) {
+            console.error("You can not login due to happened err :(");
+            reject();
+        }
     }),
-    logout: () => new Promise((resolve) => {
+    logout: () => new Promise(async(resolve) => {
         // @ts-ignore
-        sessionStorage.setItem(KEY, String(0));
-        setTimeout(resolve, 1000);
+        await axios({
+            method: "post",
+            url: "/logout",
+        });
+
+        window.location.reload();
     })
 };
