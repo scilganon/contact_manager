@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba951d13-3391-4d3e-936a-a8e2e74f101e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/src/Components/LoginForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/LoginForm/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Router.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/Auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/Auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/db.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/router/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/router/auth.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,13 +62,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/services/Auth.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+            <state relative-caret-position="626">
+              <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/Components/Header.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/Components/Router.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,7 +136,6 @@
         <option value="$PROJECT_DIR$/client/test/data.ts" />
         <option value="$PROJECT_DIR$/client/src/Components/EditUserForm.tsx" />
         <option value="$PROJECT_DIR$/client/src/constants/roles.ts" />
-        <option value="$PROJECT_DIR$/client/src/Components/Router.tsx" />
         <option value="$PROJECT_DIR$/client/src/Components/EditUser.tsx" />
         <option value="$PROJECT_DIR$/server/.gitignore" />
         <option value="$PROJECT_DIR$/client/config/webpack.dev.config.js" />
@@ -133,7 +154,9 @@
         <option value="$PROJECT_DIR$/server/src/index.ts" />
         <option value="$PROJECT_DIR$/client/src/Components/LoginForm/index.tsx" />
         <option value="$PROJECT_DIR$/server/src/router/auth.ts" />
+        <option value="$PROJECT_DIR$/client/src/Components/Router.tsx" />
         <option value="$PROJECT_DIR$/client/src/services/Auth.ts" />
+        <option value="$PROJECT_DIR$/client/src/Components/Header.tsx" />
       </list>
     </option>
   </component>
@@ -163,6 +186,24 @@
             <path>
               <item name="codesurf_intro" type="b2602c69:ProjectViewProjectNode" />
               <item name="codesurf_intro" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codesurf_intro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codesurf_intro" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codesurf_intro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codesurf_intro" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codesurf_intro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codesurf_intro" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -170,13 +211,6 @@
               <item name="codesurf_intro" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codesurf_intro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codesurf_intro" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,25 +287,25 @@
       <option name="presentableId" value="Default" />
       <updated>1560414387972</updated>
       <workItem from="1560414389171" duration="22645000" />
-      <workItem from="1560587229406" duration="14791000" />
+      <workItem from="1560587229406" duration="15461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37436000" />
+    <option name="totallyTimeSpent" value="38106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-22" width="1922" height="1106" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969216" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997367" weight="0.32969216" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49921012" visible="true" weight="0.39920557" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49921012" visible="true" weight="0.39920557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -345,9 +379,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -493,16 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/Router.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -694,12 +715,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/Router.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/services/Auth.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="626">
+          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/Header.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>

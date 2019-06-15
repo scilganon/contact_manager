@@ -7,6 +7,7 @@ import { UserList } from "./UserList"
 import { EditUser } from "./EditUser";
 import { AuthStore } from "../services/Auth";
 import { ROLES } from "../../../common/roles";
+import { Header } from "./Header";
 
 const PrivateRoute: any = ({ component: Component, roles = [], ...rest }: any) => (
     <Route
@@ -42,6 +43,7 @@ const PrivateRoute: any = ({ component: Component, roles = [], ...rest }: any) =
 export const AppLayout = (
     <Router>
         <div className="app-layout">
+            <Header isLoggedIn={AuthStore.isAuthentificated} onLogout={AuthStore.logout}/>
             <Route path="/" exact component={Intro} />
             <Route path="/login" exact render={() => AuthStore.isAuthentificated ? <Redirect to={{
                 pathname: "/",

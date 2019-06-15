@@ -38,9 +38,12 @@ export const AuthStore = {
     logout: () => new Promise(async(resolve) => {
         // @ts-ignore
         await axios({
-            method: "post",
+            method: "get",
             url: "/logout",
         });
+
+        sessionStorage.removeItem(KEY);
+        sessionStorage.removeItem(ROLE);
 
         window.location.reload();
     })
