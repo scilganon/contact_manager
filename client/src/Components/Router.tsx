@@ -43,7 +43,7 @@ const PrivateRoute: any = ({ component: Component, roles = [], ...rest }: any) =
 export const AppLayout = (
     <Router>
         <div className="app-layout">
-            <Header isLoggedIn={AuthStore.isAuthentificated} onLogout={AuthStore.logout}/>
+            <Header isLoggedIn={AuthStore.isAuthentificated} onLogout={AuthStore.logout} isAdmin={AuthStore.isAdmin} />
             <Route path="/" exact component={Intro} />
             <Route path="/login" exact render={() => AuthStore.isAuthentificated ? <Redirect to={{
                 pathname: "/",
