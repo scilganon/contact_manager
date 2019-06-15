@@ -18,10 +18,11 @@ export type UserType = {
 };
 
 const UserSchema = new Schema<UserType>({
-    id: { type: Number, min: 1,  default: Date.now, required: true },
+    id: { type: String, default: Date.now, required: true },
     name: { type: String, default: '', trim: true, maxlength: 100, required: true },
     lastName: { type: String, default: '', trim: true, maxlength: 100, required: true },
     email: { type: String, default: '', trim: true, maxlength: 100, required: true },
+    phoneNumber: { type: String, default: '', trim: true, maxlength: 100, required: true },
     address: {
         city: { type: String, default: '', trim: true, maxlength: 100 },
         postalCode: { type: String, default: '', trim: true, maxlength: 7 },

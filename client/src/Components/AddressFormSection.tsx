@@ -14,19 +14,19 @@ export const AddressFormSection: React.FunctionComponent<AddressFormSectionProps
 
         <Form.Group>
             <Form.Label>Address</Form.Label>
-            <Form.Control type="text" value={values.address} name="address.address" />
+            <Form.Control type="text" defaultValue={values.address} name="address_address" />
         </Form.Group>
         <Form.Group>
             <Form.Label>City</Form.Label>
-            <Form.Control type="text" value={values.city} name="address.city" />
+            <Form.Control type="text" defaultValue={values.city} name="address_city" />
         </Form.Group>
         <Form.Group>
             <Form.Label>Postal code</Form.Label>
-            <Form.Control type="text" value={values.postalCode} name="address.postalCode" />
+            <Form.Control type="text" defaultValue={values.postalCode} name="address_postalCode" />
         </Form.Group>
         <Form.Group>
             <Form.Label>Country</Form.Label>
-            <Form.Control type="text" value={values.country} name="address.country" />
+            <Form.Control type="text" defaultValue={values.country} name="address_country" />
         </Form.Group>
     </fieldset>
 );

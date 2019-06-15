@@ -31,7 +31,7 @@ App.get(/.*/, (req, res) => {
     return res.status(500).end();
 });
 
-mongoose.connect(config.mongo.url, {useNewUrlParser: true}).then(() => {
+mongoose.connect(config.mongo.url, {useNewUrlParser: true, useFindAndModify: false}).then(() => {
     console.log('Mongo is online, connected.');
 
     App.listen(+process.env["PORT"], process.env["HOST"], () => console.log("Server is online, started successfully."));

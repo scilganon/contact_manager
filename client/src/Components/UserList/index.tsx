@@ -1,7 +1,13 @@
 import * as React from "react";
 import { Table, Dropdown } from "react-bootstrap";
 import { User } from "../../types/common";
-import { usersTmp } from "../../../test/data";
+import * as axios from "axios";
+
+//@ts-ignore
+const loadUsers = (): Promise<User[]> => axios({
+    method: "get",
+    url: '/api/users',
+}).then(({ data }: any) => data);
 
 export type UserListProps = {
     load: () => Promise<User[]>,
@@ -12,9 +18,8 @@ type UserListState = {
 };
 
 export class UserList extends React.Component<UserListProps, UserListState> {
-
     static defaultProps: UserListProps = {
-        load: () => Promise.resolve(usersTmp),
+        load: loadUsers,
     };
 
     state: UserListState = {
@@ -44,7 +49,7 @@ export class UserList extends React.Component<UserListProps, UserListState> {
                 </tr>
                 </thead>
                 <tbody>
-                {users.map(({ name, email, id }, index) => (
+                {users.map(({ name, email, _id }, index) => (
                     <tr key={index}>
                         <td>{index}</td>
                         <td>{name}</td>
@@ -56,7 +61,7 @@ export class UserList extends React.Component<UserListProps, UserListState> {
                                 </Dropdown.Toggle>
 
                                 <Dropdown.Menu>
-                                    <Dropdown.Item href={`/users/${id}`}>Edit</Dropdown.Item>
+                                    <Dropdown.Item href={`/users/${_id}`}>Edit</Dropdown.Item>
                                     <Dropdown.Item>Delete</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>

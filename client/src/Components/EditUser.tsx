@@ -1,11 +1,19 @@
 import * as React from "react";
 import { EditUserForm } from "./EditUserForm";
-import { usersTmp } from "../../test/data";
 import { User } from "../types/common";
+import * as axios from "axios";
 
-const submit = () => console.log('submit:edit');
-const load = (id: number) => new Promise<User>((resolve) => {
-    setTimeout(() => resolve(usersTmp[id]), 1000);
+//@ts-ignore
+const editUser = (id: number, data: FormData) => axios({
+    method: 'post',
+    url: `/api/users/${id}`,
+    data,
+});
+
+//@ts-ignore
+const load = (id: number) => axios({
+    method: 'get',
+    url: `/api/users/${id}`,
 });
 
 export type EditUserProps = {
@@ -32,10 +40,14 @@ export class EditUser extends React.Component<EditUserProps, EditUserState> {
     }
 
     async loadUser(id: number) {
-        const user = await load(id);
+        const { data } = await load(id);
 
-        this.setState({ user });
+        this.setState({ user: data });
     }
+
+    submit = async (data: FormData) => {
+        editUser(this.props.match.params.id, data);
+    };
 
     render() {
         const { user } = this.state;
@@ -45,7 +57,7 @@ export class EditUser extends React.Component<EditUserProps, EditUserState> {
         }
 
         return (
-            <EditUserForm onSubmit={submit} formValues={user} />
+            <EditUserForm onSubmit={this.submit} formValues={user} />
         );
     }
 }

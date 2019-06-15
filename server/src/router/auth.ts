@@ -50,5 +50,7 @@ router.post('/login', async (req, res) => {
 router.get('/logout', (req, res) => {
     // @ts-ignore
     req.session.destroy();
+    // @ts-ignore
+    req.session = null;
     res.end();
 });

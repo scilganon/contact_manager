@@ -25,26 +25,26 @@ export class EditUserForm extends React.Component<EditUserFormProps> {
             }}>
                 <Form.Group>
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" value={formValues.name} name="name" />
+                    <Form.Control type="text" defaultValue={formValues.name} name="name" />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Last Name</Form.Label>
-                    <Form.Control type="text" value={formValues.lastName} name="lastName" />
+                    <Form.Control type="text" defaultValue={formValues.lastName} name="lastName" />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Phone number</Form.Label>
-                    <Form.Control type="phone" value={formValues.phoneNumber} name="phoneNumber" />
+                    <Form.Control type="phone" defaultValue={formValues.phoneNumber} name="phoneNumber" />
                 </Form.Group>
                 <Form.Group>
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" value={formValues.phoneNumber} name="email" />
+                    <Form.Control type="email" defaultValue={formValues.email} name="email" />
                 </Form.Group>
 
                 <AddressFormSection values={formValues.address} />
 
                 <Form.Group>
                     <Form.Label>Website</Form.Label>
-                    <Form.Control type="url" value={formValues.website} name="website" />
+                    <Form.Control type="url" defaultValue={formValues.website} name="website" />
                 </Form.Group>
                 <Button type="submit">{submitTitle}</Button>
             </Form>

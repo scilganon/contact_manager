@@ -6,7 +6,7 @@ export type Address = {
 };
 
 export type User = {
-    id: number;
+    _id: number;
     name: string;
     lastName: string;
     email: string;
