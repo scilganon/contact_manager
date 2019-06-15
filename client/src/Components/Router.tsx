@@ -6,7 +6,7 @@ import { Unauthorized } from "./Unauthorized";
 import { UserList } from "./UserList"
 import { EditUser } from "./EditUser";
 import { AuthStore } from "../services/Auth";
-import { ROLES } from "../constants/roles";
+import { ROLES } from "../../../common/roles";
 
 const PrivateRoute: any = ({ component: Component, roles = [], ...rest }: any) => (
     <Route

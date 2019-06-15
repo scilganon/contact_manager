@@ -1,4 +1,4 @@
-import { ROLES } from '../constants/roles'
+import { ROLES } from '../../../common/roles'
 
 const KEY = "auth";
 const ROLE = "role";
