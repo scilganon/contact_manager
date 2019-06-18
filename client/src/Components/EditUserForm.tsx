@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Form, Button } from "react-bootstrap";
-import { AddressFormSection } from "./AddressFormSection";
+import { SearchableAddressFormSection } from "./SearchAddress";
 import { User } from "../types/common";
 
 export type EditUserFormProps = {
@@ -40,7 +40,7 @@ export class EditUserForm extends React.Component<EditUserFormProps> {
                     <Form.Control type="email" defaultValue={formValues.email} name="email" />
                 </Form.Group>
 
-                <AddressFormSection values={formValues.address} />
+                <SearchableAddressFormSection values={formValues.address} />
 
                 <Form.Group>
                     <Form.Label>Website</Form.Label>

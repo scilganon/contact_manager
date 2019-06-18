@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Table, Dropdown } from "react-bootstrap";
 import { User } from "../../types/common";
-import * as axios from "axios";
+import axios from "axios";
 
 //@ts-ignore
 const loadUsers = (): Promise<User[]> => axios({

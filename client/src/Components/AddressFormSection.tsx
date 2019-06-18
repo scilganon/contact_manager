@@ -5,12 +5,15 @@ import { Address } from "../types/common";
 export type AddressFormSectionProps = {
     required?: boolean,
     values?: Partial<Address>,
+    legend?: React.ReactChild,
 };
 
 // @ts-ignore
-export const AddressFormSection: React.FunctionComponent<AddressFormSectionProps> = ({ required, values = {} }) => (
+export const AddressFormSection: React.FunctionComponent<AddressFormSectionProps> = ({ required, values = {}, legend = "Address" }) => (
     <fieldset>
-        <legend>Address</legend>
+        {legend && (
+            <legend>{legend}</legend>
+        )}
 
         <Form.Group>
             <Form.Label>Address</Form.Label>

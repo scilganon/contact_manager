@@ -1,5 +1,5 @@
 import { ROLES } from '../../../common/roles'
-import * as axios from "axios";
+import axios from "axios";
 
 const KEY = "auth";
 const ROLE = "role";

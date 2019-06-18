@@ -1,8 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BaseHrefWebpackPlugin } = require('base-href-webpack-plugin');
+const webpack = require('webpack');
+const dotenv  = require('dotenv');
 
-const PORT = 9000;
+dotenv.config();
 
 module.exports = {
     mode: "development",
@@ -13,10 +15,14 @@ module.exports = {
         path: __dirname + "/../build"
     },
 
+    watch: true,
+
     devServer: {
+        hot: true,
         contentBase: path.join(__dirname, '/../build'),
         compress: true,
-        port: PORT,
+        port: process.env["WEBPACK_DEVSERVER_PORT"],
+        host: process.env["WEBPACK_DEVSERVER_HOST"],
         historyApiFallback: {
             rewrites: [
                 { from: /.*/, to: '/index.html' },
@@ -50,5 +56,6 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin(),
         new BaseHrefWebpackPlugin({ baseHref: '/' }),
+        new webpack.EnvironmentPlugin(['GOOGLE_API_KEY']),
     ],
 };
